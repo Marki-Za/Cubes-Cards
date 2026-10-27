@@ -1,0 +1,19 @@
+/* Навчальний "до": повторювані значення ще не винесені у змінні. */
+body { margin: 0; background: #fff7e8; color: #17223b; font-family: Arial, sans-serif; }
+.header { display: flex; padding: 16px 5%; background: #17223b; color: #fff; }
+.hero { display: grid; grid-template-columns: 1fr 1fr; background: #17223b; color: #fff; }
+.hero h1 { color: #fff; font-size: 48px; }
+.hero h1 span { color: #ffc857; }
+.button { padding: 12px 24px; border-radius: 99px; background: #ffc857; color: #17223b; box-shadow: 0 4px 12px #ffc85747; }
+.benefits { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding: 64px 5%; background: #fff7e8; }
+.benefit-card { padding: 24px; border-radius: 16px; background: #fff; box-shadow: 0 4px 16px #17223b14; }
+.review-card { padding: 24px; border-radius: 16px; background: #fff; box-shadow: 0 4px 16px #17223b14; }
+.quiz-card { padding: 32px; border-radius: 16px; background: #fff; box-shadow: 0 4px 16px #17223b14; }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding: 72px 5%; background: #17223b; color: #fff; }
+.step-card__number { width: 64px; height: 64px; border-radius: 50%; background: #ffc857; color: #17223b; }
+.step-card__number--mint { background: #5cc8a1; }
+.step-card__number--coral { background: #ff6b5a; }
+.contact-form { padding: 32px; border-radius: 16px; background: #fff; }
+.contact-form input { padding: 12px; border: 1px solid #d8deea; border-radius: 8px; }
+@media (max-width: 768px) { .benefits { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 576px) { .benefits { grid-template-columns: 1fr; } .hero { grid-template-columns: 1fr; } }

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Кубики&Карти — семантичний етап</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Перейти до основного вмісту</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="#top" aria-label="Кубики та Карти — на головну"><img src="../../assets/icons/logotype-header.svg" alt="" width="150" height="36"></a>
+      <nav class="site-nav" aria-label="Головна навігація">
+        <ul class="site-nav__list">
+          <li><a href="#how-it-works">Як це працює</a></li><li><a href="#games">Ігри</a></li><li><a href="#quiz">Підбір гри</a></li><li><a href="#reviews">Відгуки</a></li><li><a href="#contact">Контакти</a></li>
+        </ul>
+      </nav>
+      <a class="button button--small site-header__cta" href="#quiz">Підібрати гру</a>
+    </div>
+  </header>
+  <main id="main-content">
+    <!-- header/nav замість безіменних блоків пояснюють призначення навігації. -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow hero__eyebrow">Сервіс підбору ігор</p>
+          <h1 id="hero-title">Знайди гру,<br><span class="hero__highlight">яка зробить</span><br>ваш вечір<br>незабутнім</h1>
+          <p class="hero__description">Відповідайте на 4 питання — і ми підберемо ідеальну настільну гру для вашої компанії.</p>
+          <div class="hero__actions"><a class="button" href="#quiz">Підібрати гру</a><a class="button button--outline" href="#how-it-works">Як це працює</a></div>
+        </div>
+        <div class="hero__media">
+          <video class="hero__video" autoplay muted loop playsinline poster="../../assets/images/image.webp" aria-hidden="true" tabindex="-1"><source src="../../assets/video/hero-video.mp4" type="video/mp4">Ваш браузер не підтримує відео.</video>
+        </div>
+      </div>
+    </section>
+    <!-- article позначає самостійні картки, а ul зберігає семантику списку. -->
+    <section class="benefits section" id="games" aria-labelledby="benefits-title">
+      <div class="container">
+        <h2 id="benefits-title">Переваги сервісу</h2>
+        <div class="benefits__grid">
+          <article class="benefit-card"><h3>Не треба годинами шукати</h3><p>Наш алгоритм підбирає ідеальну гру за 2 хвилини.</p></article>
+          <article class="benefit-card"><h3>Гра під вашу компанію</h3><p>Враховуємо вік, кількість гравців і настрій.</p></article>
+          <article class="benefit-card"><h3>Прості правила</h3><p>Почати грати можна одразу.</p></article>
+          <article class="benefit-card"><h3>Гнучка підписка</h3><p>Нова гра та враження без зобов’язань.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="how section section--dark" id="how-it-works" aria-labelledby="how-title">
+      <div class="container">
+        <header class="section-heading section-heading--center"><p class="eyebrow">Як це працює</p><h2 id="how-title">Три кроки до ідеального вечора</h2></header>
+        <ol class="steps">
+          <li class="step-card"><span class="step-card__number step-card__number--gold">1</span><h3>Розкажіть про компанію</h3><p>Вкажіть кількість гравців, вік, час і настрій.</p></li>
+          <li class="step-card"><span class="step-card__number step-card__number--mint">2</span><h3>Отримайте рекомендацію</h3><p>Ми підберемо ідеальну гру з каталогу.</p></li>
+          <li class="step-card"><span class="step-card__number step-card__number--coral">3</span><h3>Грайте!</h3><p>Отримайте бокс додому та грайте одразу.</p></li>
+        </ol>
+      </div>
+    </section>
+    <section class="quiz section" id="quiz" aria-labelledby="quiz-title"><div class="container"><header class="section-heading section-heading--center"><h2 id="quiz-title">Підбір гри на вечір</h2><p>Дайте відповідь на 4 питання — і ми знайдемо вашу гру!</p></header><article class="quiz-card"><h3>Готові знайти свою гру?</h3><a class="button" href="#contact">Почати підбір</a></article></div></section>
+    <section class="reviews section" id="reviews" aria-labelledby="reviews-title"><div class="container"><header class="section-heading section-heading--center"><h2 id="reviews-title">Відгуки гравців</h2></header><div class="reviews__grid"><article class="review-card"><h3>Олена К. — Львів</h3><blockquote>«Чудовий вечір із новою грою!»</blockquote></article><article class="review-card"><h3>Андрій М. — Київ</h3><blockquote>«Гра сподобалася всій родині.»</blockquote></article><article class="review-card"><h3>Марія С. — Тернопіль</h3><blockquote>«Зручно відкривати нові ігри.»</blockquote></article></div></div></section>
+    <section class="final-cta section" aria-labelledby="final-cta-title"><div class="container"><h2 id="final-cta-title">Готові до наступного ігрового вечора?</h2><a class="button" href="#quiz">Підібрати гру</a></div></section>
+    <section class="contact section" id="contact" aria-labelledby="contact-title"><div class="container contact__layout"><div class="contact__intro"><h2 id="contact-title">Залишилися питання?</h2></div><form class="contact-form" action="mailto:hello@kubikykarty.ua" method="post" enctype="text/plain"><div class="contact-form__field"><label for="name">Ім’я</label><input id="name" name="name" required></div><div class="contact-form__field"><label for="email">Email</label><input id="email" name="email" type="email" required></div><div class="contact-form__field"><label for="message">Повідомлення</label><textarea id="message" name="message" required></textarea></div><button class="button" type="submit">Надіслати</button></form></div></section>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="site-footer__main"><div class="site-footer__about"><a class="site-footer__brand" href="#top" aria-label="На початок"><img src="../../assets/icons/logotype-header.svg" alt="" width="150" height="36"></a><p>Настільні ігри для ваших найкращих вечорів.</p></div><nav class="site-footer__nav" aria-label="Навігація у підвалі"><h2>Навігація</h2><ul><li><a href="#how-it-works">Як це працює</a></li><li><a href="#quiz">Підбір гри</a></li><li><a href="#reviews">Відгуки</a></li></ul></nav><div class="site-footer__contact"><h2>Контакти</h2><address><a href="mailto:hello@kubikykarty.ua">hello@kubikykarty.ua</a></address></div></div><div class="site-footer__bottom"><p>© 2026 Кубики&Карти.</p></div></div></footer>
+</body>
+</html>

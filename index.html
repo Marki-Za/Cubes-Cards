@@ -1,0 +1,346 @@
+<!doctype html>
+<html class="scroll-smooth scroll-pt-4 motion-reduce:scroll-auto" lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Підбір настільної гри, бокс настільних ігор, підписка на настільні ігри та сімейні настільні ігри українською для компанії.">
+  <meta name="theme-color" content="#17223B">
+  <meta property="og:title" content="Кубики&Карти — підбір настільних ігор за 1 хвилину">
+  <meta property="og:description" content="Підбір настільної гри для компанії, сімейних настільних ігор та підписка на бокс настільних ігор українською мовою.">
+  <meta property="og:image" content="assets/images/image.webp">
+  <title>Кубики&amp;Карти — підбір настільних ігор за 1 хвилину</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: "#17223B",
+            cream: "#FFF7E8",
+            sun: "#FFC857", 
+            "sun-hover": "#F5A914",
+            "sun-active": "#DC9200",
+            coral: "#FF6B5A",
+            mint: "#5CC8A1",
+            "coral-dark": "#B02E24",
+            rating: "#805600",
+            "text-muted": "#48536A",
+            "line-soft": "#D8DEEA"
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            heading: ["Manrope", "sans-serif"]
+          },
+          boxShadow: {
+            card: "0 4px 16px rgb(23 34 59 / 8%)",
+            "card-hover": "0 12px 28px rgb(23 34 59 / 12%)",
+            button: "0 4px 12px rgb(255 200 87 / 28%)"
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <script async defer src="https://www.time.is/t.js"></script>
+</head>
+<body id="top" class="bg-cream font-sans text-navy antialiased">
+  <a class="sr-only fixed left-4 top-4 z-50 rounded-lg bg-white px-4 py-3 font-bold text-navy focus:not-sr-only focus:outline-none focus:ring-4 focus:ring-sun" href="#main-content">Перейти до основного вмісту</a>
+  <header class="sticky top-0 z-50 bg-navy text-white shadow-lg shadow-navy/10">
+    <div class="mx-auto flex min-h-[76px] max-w-[1240px] items-center justify-between gap-3 px-5 py-3 sm:px-8 lg:px-10">
+      <a class="shrink-0 rounded focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun" href="#top" aria-label="Кубики та Карти — на головну">
+        <img class="h-auto w-32 sm:w-[150px]" src="assets/icons/logotype-header.svg" alt="Кубики та Карти" width="150" height="36">
+      </a>
+      <nav id="primary-navigation" class="nav-menu absolute left-0 right-0 top-full hidden border-t border-white/10 bg-navy px-5 pb-5 pt-3 shadow-lg md:static md:block md:border-0 md:bg-transparent md:p-0 md:shadow-none" aria-label="Головна навігація">
+        <ul class="flex flex-col gap-1 md:flex-row md:items-center md:gap-5 lg:gap-7">
+          <li><a class="block rounded px-3 py-2 text-sm font-semibold hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun md:px-0" href="#how">Як це працює</a></li>
+          <li><a class="block rounded px-3 py-2 text-sm font-semibold hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun md:px-0" href="#features">Ігри</a></li>
+          <li><a class="block rounded px-3 py-2 text-sm font-semibold hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun md:px-0" href="#quiz">Підбір гри</a></li>
+          <li><a class="block rounded px-3 py-2 text-sm font-semibold hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun md:px-0" href="#testimonials">Відгуки</a></li>
+          <li><a class="block rounded px-3 py-2 text-sm font-semibold hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun md:px-0" href="#contacts">Контакти</a></li>
+          <li class="pt-2 md:hidden"><a class="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full border border-transparent bg-sun px-6 py-3 font-extrabold leading-tight text-navy shadow-button transition hover:-translate-y-px hover:bg-sun-hover active:translate-y-0 active:bg-sun-active focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun" href="#quiz">Підібрати гру</a></li>
+        </ul>
+      </nav>
+      <a class="hidden min-h-11 items-center justify-center rounded-full bg-sun px-5 py-3 text-sm font-extrabold text-navy shadow-button transition hover:-translate-y-px hover:bg-sun-hover active:translate-y-0 active:bg-sun-active focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun md:inline-flex" href="#quiz">Підібрати гру</a>
+      <button class="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg text-white hover:bg-white/10 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun md:hidden" type="button" aria-label="Відкрити меню" aria-controls="primary-navigation" aria-expanded="false" data-menu-toggle>
+        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero-surface text-white" id="hero" aria-labelledby="hero-title">
+      <div class="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-8 px-5 py-12 sm:px-8 sm:py-16 md:py-20 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 lg:px-10">
+        <div class="min-w-0 lg:pr-2">
+          <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-sun/30 bg-sun/10 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.16em] text-sun"><span aria-hidden="true">✦</span> Сервіс підбору ігор</p>
+          <h1 class="max-w-[560px] font-heading text-[clamp(2.8rem,5.2vw,5rem)] font-extrabold leading-[0.95] tracking-[-0.05em] text-white" id="hero-title">Знайди гру, <span class="text-sun">яка зробить</span> ваш вечір незабутнім</h1>
+          <p class="mt-5 max-w-[520px] text-base leading-7 text-white/80 sm:text-lg">Відповідайте на 4 питання — і ми підберемо ідеальну настільну гру для вашої компанії. Без зайвого пошуку, без складних правил.</p>
+          <div class="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <a class="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-sun px-6 py-3 text-base font-extrabold leading-tight text-navy shadow-button transition hover:-translate-y-px hover:bg-sun-hover active:translate-y-0 active:bg-sun-active focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun" href="#quiz"><span aria-hidden="true">🎲</span> Підібрати гру</a>
+            <a class="inline-flex min-h-[52px] items-center justify-center rounded-full border border-white/35 bg-transparent px-6 py-3 text-base font-extrabold leading-tight text-white transition hover:border-sun hover:bg-sun/10 hover:text-sun active:border-sun active:bg-sun/20 active:text-sun focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun" href="#how">Як це працює</a>
+          </div>
+          <dl class="mt-9 grid grid-cols-3 gap-2 sm:max-w-lg sm:gap-4" aria-label="Кубики та Карти у цифрах">
+            <div class="flex flex-col-reverse border-l border-white/20 pl-2 first:border-0 first:pl-0 sm:pl-4">
+              <dt class="mt-1 text-[11px] leading-4 text-white/75 sm:text-xs">Задоволених гравців</dt><dd class="font-heading text-xl font-extrabold text-sun sm:text-2xl">2 400+</dd>
+            </div>
+            <div class="flex flex-col-reverse border-l border-white/20 pl-2 sm:pl-4">
+              <dt class="mt-1 text-[11px] leading-4 text-white/75 sm:text-xs">Середній рейтинг</dt><dd class="font-heading text-xl font-extrabold text-mint sm:text-2xl">4.9 <span aria-hidden="true">★</span></dd>
+            </div>
+            <div class="flex flex-col-reverse border-l border-white/20 pl-2 sm:pl-4">
+              <dt class="mt-1 text-[11px] leading-4 text-white/75 sm:text-xs">Ігор у каталозі</dt><dd class="font-heading text-xl font-extrabold text-coral sm:text-2xl">150+</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="hero-media relative min-h-[260px] overflow-hidden rounded-[28px] border border-white/10 bg-white/5 shadow-card sm:min-h-[360px] lg:min-h-[500px] lg:max-w-[560px] lg:justify-self-end">
+          <img class="absolute inset-0 h-full w-full object-cover object-center opacity-95" src="assets/images/image.webp" alt="Ілюстрація вечора за настільною грою" width="1024" height="576">
+          <video class="absolute inset-0 h-full w-full object-cover object-center opacity-90" autoplay muted loop playsinline poster="assets/images/image.webp" preload="metadata" aria-hidden="true" tabindex="-1">
+            <source src="assets/video/hero-video.mp4" type="video/mp4">
+            Ваш браузер не підтримує відтворення відео.
+          </video>
+          <p class="sr-only">Друзі зібралися за столом, грають у настільну гру та весело проводять час.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-cream py-16 sm:py-20 lg:py-24" id="features" aria-labelledby="features-title">
+      <div class="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-10">
+        <header class="mx-auto mb-10 max-w-3xl text-center">
+          <p class="mb-3 text-sm font-extrabold uppercase tracking-widest text-coral-dark">Чому Кубики&Карти</p>
+          <h2 class="font-heading text-3xl font-extrabold leading-tight sm:text-4xl" id="features-title">Чому Кубики&Карти</h2>
+        </header>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="rounded-2xl border border-navy/10 bg-white p-6 shadow-card transition duration-200 hover:-translate-y-0.5 hover:shadow-card-hover">
+            <span class="mb-4 grid h-12 w-12 place-items-center rounded-xl bg-cream text-2xl" aria-hidden="true">🎯</span>
+            <h3 class="font-heading text-lg font-extrabold leading-snug">Без втоми від вибору</h3>
+            <p class="mt-3 text-sm leading-6 text-text-muted">Квіз за хвилину підбирає гру під вашу компанію без довгих пошуків у каталогах.</p>
+          </article>
+          <article class="rounded-2xl border border-navy/10 bg-white p-6 shadow-card transition duration-200 hover:-translate-y-0.5 hover:shadow-card-hover">
+            <span class="mb-4 grid h-12 w-12 place-items-center rounded-xl bg-mint/20 text-2xl" aria-hidden="true">📘</span>
+            <h3 class="font-heading text-lg font-extrabold leading-snug">Прості правила</h3>
+            <p class="mt-3 text-sm leading-6 text-text-muted">До кожної гри є відеоогляд і правила українською — почати грати можна одразу.</p>
+          </article>
+          <article class="rounded-2xl border border-navy/10 bg-white p-6 shadow-card transition duration-200 hover:-translate-y-0.5 hover:shadow-card-hover">
+            <span class="mb-4 grid h-12 w-12 place-items-center rounded-xl bg-coral/15 text-2xl" aria-hidden="true">🚫</span>
+            <h3 class="font-heading text-lg font-extrabold leading-snug">Без дублікатів</h3>
+            <p class="mt-3 text-sm leading-6 text-text-muted">Вкажіть ігри, які вже є, і вони не потраплять у ваш бокс навіть під час наступної відправки.</p>
+          </article>
+          <article class="rounded-2xl border border-navy/10 bg-white p-6 shadow-card transition duration-200 hover:-translate-y-0.5 hover:shadow-card-hover">
+            <span class="mb-4 grid h-12 w-12 place-items-center rounded-xl bg-cream text-2xl" aria-hidden="true">⚙️</span>
+            <h3 class="font-heading text-lg font-extrabold leading-snug">Гнучка підписка</h3>
+            <p class="mt-3 text-sm leading-6 text-text-muted">Змінюйте склад боксу, пропускайте місяць або ставте на паузу в один клік без прихованих умов.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-navy py-16 text-white sm:py-20 lg:py-24" id="how" aria-labelledby="how-title">
+      <div class="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-10">
+        <header class="mx-auto mb-12 max-w-3xl text-center sm:mb-16">
+          <p class="mb-3 text-sm font-extrabold uppercase tracking-widest text-sun">Як це працює</p>
+          <h2 class="font-heading text-3xl font-extrabold leading-tight sm:text-4xl" id="how-title">Три кроки до ідеального вечора</h2>
+          <p class="mt-4 text-white/80">Від питань до гри — швидко, просто та з гарантованим задоволенням.</p>
+        </header>
+        <ol class="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-6 lg:gap-8">
+          <li class="flex flex-col items-center text-center">
+            <span class="mb-5 grid h-16 w-16 place-items-center rounded-full bg-sun font-heading text-2xl font-extrabold text-navy" aria-hidden="true">1</span>
+            <h3 class="font-heading text-xl font-extrabold">Розкажіть про компанію</h3>
+            <p class="mt-4 max-w-sm text-sm leading-6 text-white/80">Вкажіть кількість гравців, вік, скільки часу маєте та який настрій у компанії сьогодні.</p>
+            <ul class="mt-5 grid w-full gap-2 rounded-2xl bg-white/10 p-4 text-left text-sm" aria-label="Що ми запитаємо">
+              <li>👥 Кількість гравців</li><li>🎂 Вік учасників</li><li>⏱️ Час на гру</li><li>😃 Настрій компанії</li>
+            </ul>
+          </li>
+          <li class="flex flex-col items-center text-center">
+            <span class="mb-5 grid h-16 w-16 place-items-center rounded-full bg-mint font-heading text-2xl font-extrabold text-navy" aria-hidden="true">2</span>
+            <h3 class="font-heading text-xl font-extrabold">Отримайте рекомендацію</h3>
+            <p class="mt-4 max-w-sm text-sm leading-6 text-white/80">Наш алгоритм аналізує ваші відповіді та підбирає ідеальну гру з каталогу 150+ ігор.</p>
+            <div class="mt-5 flex min-h-40 w-full flex-col items-center justify-center rounded-2xl bg-white/10 p-5">
+              <span class="grid h-14 w-14 place-items-center rounded-2xl bg-sun text-2xl" aria-hidden="true">🎯</span>
+              <p class="mt-3 max-w-xs text-sm leading-6 text-white/85">Алгоритм враховує всі параметри та знаходить найкращий варіант саме для вас.</p>
+              <span class="mt-2 tracking-widest text-sun" aria-hidden="true">● ● ●</span>
+            </div>
+          </li>
+          <li class="flex flex-col items-center text-center">
+            <span class="mb-5 grid h-16 w-16 place-items-center rounded-full bg-coral font-heading text-2xl font-extrabold text-navy" aria-hidden="true">3</span>
+            <h3 class="font-heading text-xl font-extrabold">Грайте!</h3>
+            <p class="mt-4 max-w-sm text-sm leading-6 text-white/80">Отримайте бокс з грою та зрозумілими правилами прямо додому. Починайте грати одразу!</p>
+            <div class="mt-5 flex min-h-40 w-full flex-col items-center justify-center rounded-2xl bg-white/10 p-5">
+              <span class="grid h-14 w-14 place-items-center rounded-2xl bg-coral text-2xl" aria-hidden="true">📦</span>
+              <p class="mt-3 max-w-xs text-sm leading-6 text-white/85">Доставка боксу з грою, картками правил та усім необхідним для незабутнього вечора.</p>
+              <span class="mt-2 tracking-widest text-coral" aria-hidden="true">● ● ●</span>
+            </div>
+          </li>
+        </ol>
+        <div class="mt-10 flex justify-center"><a class="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-sun px-6 py-3 font-extrabold leading-tight text-navy shadow-button transition hover:-translate-y-px hover:bg-sun-hover active:translate-y-0 active:bg-sun-active focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun" href="#quiz"><span aria-hidden="true">🎲</span> Розпочати підбір гри</a></div>
+      </div>
+    </section>
+
+    <section class="bg-cream py-16 sm:py-20 lg:py-24" id="about" aria-labelledby="about-title">
+      <div class="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-10">
+        <h2 class="font-heading text-3xl font-extrabold leading-tight sm:text-4xl" id="about-title">Чому «Кубики&Карти»?</h2>
+        <div class="mt-6 space-y-5 text-base leading-7 text-text-muted">
+          <p>Знайомо, коли замість веселого ігрового вечора ви годинами гортаєте каталоги, губитеся серед сотень назв і боїтеся купити «не те»? Або відкриваєте коробку й пів ночі розбираєтеся у заплутаних правилах? Ми створили «Кубики&Карти», щоб настільні ігри приносили тільки радість.</p>
+          <p>Замість безкінечного вибору наш розумний квіз за хвилину підбере ідеальну гру саме під вашу компанію: врахує кількість гравців, їхній вік, вільний час та настрій. Кожна рекомендована гра супроводжується зрозумілим відеооглядом та простими правилами українською мовою.</p>
+          <p>Нам можна довіряти, бо ми за повну свободу: жодних прихованих умов чи «пасток» у підписці (змінюйте склад боксу, пропускайте місяць або ставте передплату на паузу в один клік) і без дублікатів (вкажіть ігри, які у вас вже є, і вони ніколи не потраплять у ваш бокс). Ви обираєте настрій — ми дбаємо про все інше.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-cream py-16 sm:py-20 lg:py-24" id="quiz" aria-labelledby="quiz-title">
+      <div class="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-10">
+        <header class="mx-auto mb-10 max-w-3xl text-center">
+          <p class="mb-3 text-sm font-extrabold uppercase tracking-widest text-coral-dark">Підбір гри на вечір</p>
+          <h2 class="font-heading text-3xl font-extrabold leading-tight sm:text-4xl" id="quiz-title">Підбір гри на вечір</h2>
+          <p class="mt-4 text-text-muted">Дайте відповідь на 4 питання — і ми знайдемо вашу ідеальну гру!</p>
+        </header>
+        <article class="mx-auto max-w-2xl rounded-3xl border border-navy/10 bg-white p-5 shadow-card sm:p-8" aria-label="Квіз підбору настільної гри">
+          <div class="mb-6">
+            <div class="mb-2 flex items-center justify-between gap-4 text-sm font-bold">
+              <span id="quiz-step-label">Крок 1 з 4</span><span id="quiz-progress-label">0%</span>
+            </div>
+            <progress class="quiz-progress block h-3 w-full overflow-hidden rounded-full" id="quiz-progress" max="4" value="0" aria-label="Прогрес проходження квізу">0 з 4</progress>
+          </div>
+          <div id="quiz-content" aria-live="polite" aria-atomic="true">
+            <p class="mb-2 text-sm font-extrabold uppercase tracking-wider text-coral-dark">Почнімо підбір</p>
+            <h3 class="font-heading text-2xl font-extrabold">Готові знайти свою гру?</h3>
+            <p class="mt-3 leading-7 text-text-muted">Відповідайте на 4 коротких питання, і ми підберемо тип настільної гри для вашої компанії.</p>
+            <button class="mt-6 inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-sun px-6 py-3 font-extrabold leading-tight text-navy shadow-button transition hover:-translate-y-px hover:bg-sun-hover active:translate-y-0 active:bg-sun-active focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun" type="button" data-quiz-start><span aria-hidden="true">🚀</span> Почати підбір</button>
+          </div>
+          <div class="mt-6 flex flex-wrap items-center justify-between gap-3 border-t border-navy/10 pt-5">
+            <button class="inline-flex min-h-11 items-center justify-center rounded-full border border-navy/20 bg-white px-6 py-3 font-extrabold text-navy transition hover:bg-cream active:bg-cream focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun disabled:cursor-not-allowed disabled:opacity-50" type="button" data-quiz-back disabled>Назад</button>
+            <button class="inline-flex min-h-11 items-center justify-center rounded-full bg-sun px-6 py-3 font-extrabold text-navy shadow-button transition hover:bg-sun-hover active:bg-sun-active focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun disabled:cursor-not-allowed disabled:opacity-50" type="button" data-quiz-next disabled>Далі</button>
+          </div>
+        </article>
+        <form class="mx-auto mt-8 max-w-xl rounded-2xl border border-navy/10 bg-white p-4 shadow-card sm:flex sm:items-end sm:gap-3 sm:p-5" action="#" method="post">
+          <div class="flex-1">
+            <label class="mb-2 block text-sm font-bold text-navy" for="quiz-email">Email</label>
+            <input class="min-h-12 w-full rounded-lg border border-line-soft bg-cream px-4 py-3 text-navy focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun" id="quiz-email" name="email" type="email" placeholder="name@example.com" required>
+          </div>
+          <button class="mt-3 inline-flex min-h-11 w-full items-center justify-center rounded-full bg-sun px-6 py-3 font-extrabold text-navy shadow-button transition hover:-translate-y-px hover:bg-sun-hover active:translate-y-0 active:bg-sun-active focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun sm:mt-0 sm:w-auto" type="submit">Отримати добірку ігор</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="bg-white py-16 sm:py-20 lg:py-24" id="video" aria-labelledby="video-title">
+      <div class="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-10">
+        <header class="mx-auto mb-10 max-w-3xl text-center">
+          <p class="mb-3 text-sm font-extrabold uppercase tracking-widest text-coral-dark">Як це працює</p>
+          <h2 class="font-heading text-3xl font-extrabold leading-tight sm:text-4xl" id="video-title">Погляньте на сервіс в дії</h2>
+        </header>
+        <!-- Медіаінтеграція: YouTube-відео -->
+        <div class="aspect-video w-full max-w-3xl overflow-hidden rounded-2xl shadow-lg mx-auto">
+          <iframe class="h-full w-full border-0" src="https://www.youtube.com/embed/Nn0jwpIEDgM" title="Відеоогляд настільних ігор" loading="lazy" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-cream py-16 sm:py-20 lg:py-24" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-10">
+        <header class="mx-auto mb-12 max-w-3xl text-center">
+          <p class="mb-3 text-sm font-extrabold uppercase tracking-widest text-coral-dark">Відгуки гравців</p>
+          <h2 class="font-heading text-3xl font-extrabold leading-tight sm:text-4xl" id="testimonials-title">Що кажуть гравці</h2>
+        </header>
+        <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <article class="flex flex-col rounded-2xl border border-navy/10 bg-white p-6 shadow-card transition duration-200 hover:-translate-y-0.5 hover:shadow-card-hover">
+            <p class="font-bold tracking-widest text-rating"><span aria-hidden="true">★★★★★</span><span class="sr-only">Оцінка: 5 з 5</span></p>
+            <blockquote class="mt-4 flex-1">«Нарешті не витрачаємо пів вечора на вибір гри. Бокс приїхав швидко, а правила зрозуміли з першого разу!»</blockquote>
+            <p class="mt-6 flex flex-col"><strong>Олена</strong><span class="text-sm text-text-muted">Львів</span></p>
+          </article>
+          <article class="flex flex-col rounded-2xl border border-navy/10 bg-white p-6 shadow-card transition duration-200 hover:-translate-y-0.5 hover:shadow-card-hover">
+            <p class="font-bold tracking-widest text-rating"><span aria-hidden="true">★★★★★</span><span class="sr-only">Оцінка: 5 з 5</span></p>
+            <blockquote class="mt-4 flex-1">«Підібрали гру і для дітей, і для дорослих. Тепер це наша сімейна традиція на вихідні.»</blockquote>
+            <p class="mt-6 flex flex-col"><strong>Андрій</strong><span class="text-sm text-text-muted">Київ</span></p>
+          </article>
+          <article class="flex flex-col rounded-2xl border border-navy/10 bg-white p-6 shadow-card transition duration-200 hover:-translate-y-0.5 hover:shadow-card-hover">
+            <p class="font-bold tracking-widest text-rating"><span aria-hidden="true">★★★★★</span><span class="sr-only">Оцінка: 5 з 5</span></p>
+            <blockquote class="mt-4 flex-1">«Класний спосіб відкрити для себе нові настільні ігри. Підписка гнучка — саме те для нашої компанії.»</blockquote>
+            <p class="mt-6 flex flex-col"><strong>Марта</strong><span class="text-sm text-text-muted">Тернопіль</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Медіаінтеграція: динамічний інформер -->
+    <aside class="bg-navy py-14 text-white sm:py-16" aria-label="Віджети">
+      <div class="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-10">
+        <section class="mx-auto max-w-md rounded-3xl border border-white/10 bg-white/5 p-6 shadow-card" aria-labelledby="widget-title">
+          <h3 class="font-heading text-2xl font-extrabold" id="widget-title">Час у Львові</h3>
+          <div class="mt-5 rounded-2xl border border-white/10 bg-white/5 p-5 text-center">
+            <div id="time-is-widget" class="text-3xl font-heading font-extrabold tracking-tight text-sun" aria-live="polite">--:--:--</div>
+            <p class="mt-2 text-sm text-white/75">Поточний час у Львові</p>
+          </div>
+        </section>
+      </div>
+    </aside>
+
+    <section class="bg-cream py-16 sm:py-20 lg:py-24" id="contacts" aria-labelledby="contacts-title">
+      <div class="mx-auto grid max-w-[1240px] grid-cols-1 items-start gap-8 px-5 sm:px-8 lg:grid-cols-2 lg:gap-16 lg:px-10">
+        <div>
+          <p class="mb-3 text-sm font-extrabold uppercase tracking-widest text-coral-dark">Контакти</p>
+          <h2 class="font-heading text-3xl font-extrabold leading-tight sm:text-4xl" id="contacts-title">Контакти</h2>
+          <ul class="mt-6 space-y-4 text-base leading-7 text-text-muted">
+            <li><strong class="text-navy">Адреса:</strong> м. Львів, вул. Степана Бандери, 12</li>
+            <li><strong class="text-navy">Email:</strong> <a class="font-semibold underline decoration-2 underline-offset-4 hover:text-coral-dark" href="mailto:hello@kubyky-karty.example">hello@kubyky-karty.example</a></li>
+            <li><strong class="text-navy">Графік:</strong> щодня 10:00–20:00</li>
+          </ul>
+        </div>
+        <div class="overflow-hidden rounded-2xl shadow-lg">
+          <!-- Медіаінтеграція: Google Maps -->
+          <iframe class="h-80 w-full border-0 md:h-[450px]" src="https://www.google.com/maps?q=Національний+університет+«Львівська+політехніка»,+вул.+Степана+Бандери+12,+Львів&z=16&output=embed" title="Інтерактивна карта проїзду до Львівської політехніки" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-navy py-12 text-white">
+    <div class="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-10">
+      <div class="grid grid-cols-1 gap-8 border-b border-white/15 pb-10 sm:grid-cols-2 xl:grid-cols-4">
+        <div>
+          <a class="inline-block rounded focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun" href="#top" aria-label="Кубики та Карти — на початок сторінки"><img class="h-auto w-[150px]" src="assets/icons/logotype-header.svg" alt="Кубики та Карти" width="150" height="36"></a>
+          <p class="mt-4 max-w-xs text-sm leading-6 text-white/75">Підбираємо настільні ігри для ваших найкращих вечорів.</p>
+        </div>
+        <nav aria-label="Навігація у підвалі">
+          <h2 class="mb-4 font-heading font-bold">Навігація</h2>
+          <ul class="grid gap-2 text-sm text-white/80">
+            <li><a class="hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun" href="#how">Як це працює</a></li>
+            <li><a class="hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun" href="#features">Ігри</a></li>
+            <li><a class="hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun" href="#quiz">Підбір гри</a></li>
+            <li><a class="hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun" href="#testimonials">Відгуки</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Сервіс">
+          <h2 class="mb-4 font-heading font-bold">Сервіс</h2>
+          <ul class="grid gap-2 text-sm text-white/80">
+            <li><a class="hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun" href="#features">Переваги підписки</a></li>
+            <li><a class="hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun" href="#contacts">Запитати про бокс</a></li>
+            <li><a class="hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun" href="#quiz">Знайти гру</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="mb-4 font-heading font-bold">Контакти</h2>
+          <address class="grid gap-2 text-sm not-italic text-white/80">
+            <a class="hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun" href="mailto:hello@kubyky-karty.example">hello@kubyky-karty.example</a>
+            <a class="hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun" href="tel:+380671234567">+38 (067) 123-45-67</a>
+          </address>
+          <div class="mt-4 flex flex-wrap gap-3 text-sm text-white/80">
+            <a class="hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun" href="#">Instagram</a>
+            <a class="hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun" href="#">Telegram</a>
+            <a class="hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun" href="#">Facebook</a>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col gap-3 pt-5 text-sm text-white/70 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 Кубики&amp;Карти. Усі права захищені.</p>
+        <div class="flex flex-wrap items-center gap-4">
+          <a class="hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun" href="#">Політика конфіденційності</a>
+          <a class="hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun" href="#top">На початок сторінки ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
