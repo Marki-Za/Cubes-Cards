@@ -21,6 +21,8 @@ body { margin: 0; background: #fff7e8; color: #17223b; font: 16px/1.6 Arial, san
 .step { display: inline-block; width: 30%; padding: 20px; vertical-align: top; }
 .number { margin: 0 auto 20px; padding: 12px; width: 56px; border-radius: 50%; background: #ffc857; color: #17223b; font-weight: bold; }
 .mint { background: #5cc8a1; }
+
+/* id say its a really nice color, but it is not the best for accessibility. I would suggest using a darker shade of mint or a different color altogether to ensure that the text is easily readable for all users. */
 .coral { background: #ff6b5a; }
 .quiz { padding: 72px 5%; text-align: center; }
 .quiz-box { max-width: 600px; margin: 32px auto; }
