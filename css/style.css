@@ -31,6 +31,35 @@
   z-index: 1;
 }
 
+.hero__media {
+  width: 100%;
+  max-width: 560px;
+  min-height: 260px;
+  aspect-ratio: 16 / 9;
+  margin-inline: auto;
+  overflow: hidden;
+  border-radius: 28px;
+  background: #202d49;
+  isolation: isolate;
+}
+
+.hero__poster,
+.hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__poster {
+  z-index: 0;
+}
+
+.hero__video {
+  z-index: 1;
+}
+
 .hero-media::after {
   position: absolute;
   z-index: 2;
@@ -115,5 +144,17 @@
 
   .hero-media video {
     display: none;
+  }
+}
+
+@media (min-width: 640px) {
+  .hero__media {
+    min-height: 360px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero__media {
+    min-height: 500px;
   }
 }
