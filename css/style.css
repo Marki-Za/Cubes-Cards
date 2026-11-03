@@ -79,6 +79,33 @@
   outline-offset: 3px;
 }
 
+.feedback-input[aria-invalid="true"] {
+  border-color: #b91c1c;
+}
+
+.feedback-input[aria-invalid="true"]:focus-visible {
+  outline: 3px solid rgb(185 28 28 / 25%);
+  outline-offset: 1px;
+}
+
+.feedback-input[aria-invalid="false"].is-valid {
+  border-color: #15803d;
+}
+
+.feedback-input[aria-invalid="false"].is-valid:focus-visible {
+  outline: 3px solid rgb(21 128 61 / 25%);
+  outline-offset: 1px;
+}
+
+.feedback-checkbox[aria-invalid="true"] {
+  outline: 2px solid #b91c1c;
+  outline-offset: 2px;
+}
+
+.feedback-checkbox[aria-invalid="false"].is-valid {
+  accent-color: #15803d;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
