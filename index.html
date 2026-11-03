@@ -45,6 +45,7 @@
   </script>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
+  <script src="js/validation.js" defer></script>
   <script async defer src="https://www.time.is/t.js"></script>
 </head>
 <body id="top" class="bg-cream font-sans text-navy antialiased">
@@ -61,6 +62,7 @@
           <li><a class="block rounded px-3 py-2 text-sm font-semibold hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun md:px-0" href="#quiz">Підбір гри</a></li>
           <li><a class="block rounded px-3 py-2 text-sm font-semibold hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun md:px-0" href="#testimonials">Відгуки</a></li>
           <li><a class="block rounded px-3 py-2 text-sm font-semibold hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun md:px-0" href="#contacts">Контакти</a></li>
+          <li><a class="block rounded px-3 py-2 text-sm font-semibold hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun md:px-0" href="#feedback">Зворотний зв'язок</a></li>
           <li class="pt-2 md:hidden"><a class="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full border border-transparent bg-sun px-6 py-3 font-extrabold leading-tight text-navy shadow-button transition hover:-translate-y-px hover:bg-sun-hover active:translate-y-0 active:bg-sun-active focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun" href="#quiz">Підібрати гру</a></li>
         </ul>
       </nav>
@@ -296,7 +298,76 @@
         </div>
       </div>
     </section>
+
+    <section class="bg-white py-16 sm:py-20 lg:py-24" id="feedback" aria-labelledby="feedback-title">
+      <div class="mx-auto max-w-3xl px-5 sm:px-8">
+        <header class="mx-auto mb-8 max-w-2xl text-center">
+          <p class="mb-3 text-sm font-extrabold uppercase tracking-widest text-coral-dark">Ми на зв'язку</p>
+          <h2 class="font-heading text-3xl font-extrabold leading-tight sm:text-4xl" id="feedback-title">Зворотний зв'язок</h2>
+          <p class="mt-4 leading-7 text-text-muted">Заповніть форму — перевіримо, чи всі дані введено коректно.</p>
+        </header>
+
+        <form class="grid grid-cols-1 gap-5 rounded-3xl border border-navy/10 bg-cream p-5 shadow-card sm:p-8 md:grid-cols-2" id="feedbackForm" novalidate>
+          <div class="min-w-0">
+            <label class="mb-2 block text-sm font-bold text-navy" for="username">Ім'я</label>
+            <div class="relative">
+              <input class="feedback-input min-h-12 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 pr-11 text-navy transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun/50" id="username" name="username" type="text" autocomplete="name" aria-describedby="nameError" aria-invalid="false" required>
+              <span class="feedback-success-mark absolute right-4 top-1/2 hidden -translate-y-1/2 text-green-700" data-success-for="username" aria-hidden="true">✓</span>
+            </div>
+            <p class="mt-2 hidden min-h-5 text-sm font-semibold text-red-700" id="nameError" aria-live="polite"></p>
+          </div>
+
+          <div class="min-w-0">
+            <label class="mb-2 block text-sm font-bold text-navy" for="email">Емейл</label>
+            <div class="relative">
+              <input class="feedback-input min-h-12 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 pr-11 text-navy transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun/50" id="email" name="email" type="email" autocomplete="email" aria-describedby="emailError" aria-invalid="false" required>
+              <span class="feedback-success-mark absolute right-4 top-1/2 hidden -translate-y-1/2 text-green-700" data-success-for="email" aria-hidden="true">✓</span>
+            </div>
+            <p class="mt-2 hidden min-h-5 text-sm font-semibold text-red-700" id="emailError" aria-live="polite"></p>
+          </div>
+
+          <div class="min-w-0 md:col-span-2">
+            <label class="mb-2 block text-sm font-bold text-navy" for="phone">Телефон</label>
+            <div class="relative">
+              <input class="feedback-input min-h-12 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 pr-11 text-navy transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun/50" id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="13" aria-describedby="phoneError" aria-invalid="false" required>
+              <span class="feedback-success-mark absolute right-4 top-1/2 hidden -translate-y-1/2 text-green-700" data-success-for="phone" aria-hidden="true">✓</span>
+            </div>
+            <p class="mt-2 hidden min-h-5 text-sm font-semibold text-red-700" id="phoneError" aria-live="polite"></p>
+          </div>
+
+          <div class="min-w-0 md:col-span-2">
+            <label class="mb-2 block text-sm font-bold text-navy" for="message">Повідомлення</label>
+            <div class="relative">
+              <textarea class="feedback-input min-h-36 w-full resize-y rounded-lg border border-gray-300 bg-white px-4 py-3 pr-11 text-navy transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun/50" id="message" name="message" rows="5" aria-describedby="messageError" aria-invalid="false" required></textarea>
+              <span class="feedback-success-mark absolute right-4 top-4 hidden text-green-700" data-success-for="message" aria-hidden="true">✓</span>
+            </div>
+            <p class="mt-2 hidden min-h-5 text-sm font-semibold text-red-700" id="messageError" aria-live="polite"></p>
+          </div>
+
+          <div class="md:col-span-2">
+            <div class="flex min-h-11 items-start gap-3">
+              <input class="feedback-checkbox mt-1 h-5 w-5 shrink-0 rounded border-gray-300 text-navy focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun/60" id="agreement" name="agreement" type="checkbox" aria-describedby="agreementError privacy-note" aria-invalid="false" required>
+              <label class="text-sm leading-6 text-navy" for="agreement">Погоджуюся з <a class="font-bold underline decoration-2 underline-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun" href="#privacy-note">політикою конфіденційності</a>.</label>
+            </div>
+            <p class="mt-2 hidden min-h-5 text-sm font-semibold text-red-700" id="agreementError" aria-live="polite"></p>
+          </div>
+
+          <p class="text-sm leading-6 text-text-muted md:col-span-2" id="privacy-note">Це навчальна демонстрація клієнтської валідації: дані нікуди не надсилаються і не зберігаються.</p>
+
+          <button class="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-sun px-6 py-3 font-extrabold text-navy shadow-button transition hover:-translate-y-px hover:bg-sun-hover active:translate-y-0 active:bg-sun-active focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun disabled:cursor-not-allowed disabled:opacity-60 md:col-span-2" id="submitFeedbackBtn" type="submit">Надіслати</button>
+        </form>
+      </div>
+    </section>
   </main>
+
+  <div class="fixed inset-0 z-[100] hidden items-center justify-center bg-navy/75 p-4" id="successModal" role="dialog" aria-modal="true" aria-labelledby="successModalTitle" aria-describedby="successModalDescription">
+    <div class="w-full max-w-lg rounded-2xl bg-white p-6 text-center shadow-2xl sm:p-8">
+      <p class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100 text-2xl font-bold text-green-800" aria-hidden="true">✓</p>
+      <h2 class="mt-4 font-heading text-2xl font-extrabold text-navy" id="successModalTitle">Форму перевірено</h2>
+      <p class="mt-3 leading-7 text-text-muted" id="successModalDescription">Дякуємо! Форма успішно пройшла клієнтську валідацію. Демонстрація успішного надсилання.</p>
+      <button class="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-sun px-6 py-3 font-extrabold text-navy transition hover:bg-sun-hover focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun sm:w-auto" id="closeModalBtn" type="button">Закрити</button>
+    </div>
+  </div>
 
   <footer class="bg-navy py-12 text-white">
     <div class="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-10">
@@ -318,7 +389,7 @@
           <h2 class="mb-4 font-heading font-bold">Сервіс</h2>
           <ul class="grid gap-2 text-sm text-white/80">
             <li><a class="hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun" href="#features">Переваги підписки</a></li>
-            <li><a class="hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun" href="#contacts">Запитати про бокс</a></li>
+            <li><a class="hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun" href="#feedback">Зворотний зв'язок</a></li>
             <li><a class="hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun" href="#quiz">Знайти гру</a></li>
           </ul>
         </nav>
@@ -338,7 +409,7 @@
       <div class="flex flex-col gap-3 pt-5 text-sm text-white/70 sm:flex-row sm:items-center sm:justify-between">
         <p>© 2026 Кубики&amp;Карти. Усі права захищені.</p>
         <div class="flex flex-wrap items-center gap-4">
-          <a class="hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun" href="#">Політика конфіденційності</a>
+          <a class="hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun" href="#privacy-note">Політика конфіденційності</a>
           <a class="hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun" href="#top">На початок сторінки ↑</a>
         </div>
       </div>
