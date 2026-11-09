@@ -135,6 +135,66 @@
   accent-color: #15803d;
 }
 
+.reviews-swiper {
+  --swiper-theme-color: var(--color-navy);
+  --swiper-navigation-size: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.reviews-swiper .swiper-slide {
+  height: auto;
+}
+
+.reviews-swiper:not(.swiper-initialized) .swiper-wrapper {
+  display: flex;
+}
+
+.reviews-swiper:not(.swiper-initialized) .swiper-slide {
+  flex: 0 0 100%;
+}
+
+.reviews-swiper .swiper-button-prev,
+.reviews-swiper .swiper-button-next {
+  position: static;
+  flex: 0 0 2.75rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin: 0;
+  transform: none;
+  border: 1px solid rgb(23 34 59 / 24%);
+  border-radius: 9999px;
+  background: #fff;
+}
+
+.reviews-swiper .swiper-button-prev::after,
+.reviews-swiper .swiper-button-next::after {
+  font-size: var(--swiper-navigation-size);
+  font-weight: 800;
+}
+
+.reviews-swiper .swiper-pagination {
+  position: static;
+  width: auto;
+}
+
+.reviews-swiper .swiper-pagination-bullet {
+  margin: 0 4px;
+  background: var(--color-navy);
+  opacity: 0.65;
+}
+
+.reviews-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.reviews-swiper .swiper-button-prev:focus-visible,
+.reviews-swiper .swiper-button-next:focus-visible,
+.reviews-swiper .swiper-pagination-bullet:focus-visible {
+  outline: 3px solid #b02e24;
+  outline-offset: 3px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
