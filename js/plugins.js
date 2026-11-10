@@ -24,11 +24,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  if (document.querySelector('[data-fancybox="games-gallery"]') && typeof Fancybox !== "undefined") {
-    Fancybox.bind('[data-fancybox="games-gallery"]', {
+  if (document.querySelector('[data-fancybox="gallery"]') && typeof Fancybox !== "undefined") {
+    Fancybox.bind('[data-fancybox="gallery"]', {
       Carousel: { transition: "fade" },
       Images: { Panzoom: { maxScale: 3 } },
-      Thumbs: { type: "classic" }
+      Thumbs: { autoStart: true }
     });
   }
 
