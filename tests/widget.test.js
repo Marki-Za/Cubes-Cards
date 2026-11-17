@@ -63,7 +63,7 @@ optionsCases.forEach((item, index) => {
   run(20 + index, item[0], JSON.stringify(item[1]), 650 + item[2], actual);
 });
 
-run(24, "підроблений тип", "hacker", "Оберіть тип набору зі списку.", "Оберіть тип набору зі списку.");
+run(24, "підроблений тип", "hacker", "null", calculateTotal({ sets: 1, type: "hacker", giftBox: false, engraving: false, express: false }));
 
 let stressExpected;
 let stressActual = "1 набір / classic / 650 грн";
