@@ -65,6 +65,7 @@
           <li><a class="block rounded px-3 py-2 text-sm font-semibold hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun md:px-0" href="#quiz">Підбір гри</a></li>
           <li><a class="block rounded px-3 py-2 text-sm font-semibold hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun md:px-0" href="#gallery">Галерея</a></li>
           <li><a class="block rounded px-3 py-2 text-sm font-semibold hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun md:px-0" href="#reviews">Відгуки</a></li>
+          <li><a class="block rounded px-3 py-2 text-sm font-semibold hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun md:px-0" href="#widget">Калькулятор набору</a></li>
           <li><a class="block rounded px-3 py-2 text-sm font-semibold hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun md:px-0" href="#contacts">Контакти</a></li>
           <li><a class="block rounded px-3 py-2 text-sm font-semibold hover:text-sun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun md:px-0" href="#feedback">Зворотний зв'язок</a></li>
           <li class="pt-2 md:hidden"><a class="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full border border-transparent bg-sun px-6 py-3 font-extrabold leading-tight text-navy shadow-button transition hover:-translate-y-px hover:bg-sun-hover active:translate-y-0 active:bg-sun-active focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun" href="#quiz">Підібрати гру</a></li>
@@ -414,6 +415,64 @@
       </div>
     </section>
 
+    <section class="bg-white py-16 sm:py-20 lg:py-24" id="widget" aria-labelledby="widget-title" data-widget-root>
+      <div class="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-10">
+        <header class="mx-auto mb-10 max-w-3xl text-center" data-aos="fade-up" data-aos-duration="700">
+          <p class="mb-3 text-sm font-extrabold uppercase tracking-widest text-coral-dark">Подарунковий набор</p>
+          <h2 class="font-heading text-3xl font-extrabold leading-tight sm:text-4xl" id="widget-title">Збери свій набір</h2>
+          <p class="mt-4 leading-7 text-text-muted">Оберіть кількість і комплектацію — вартість оновиться миттєво.</p>
+        </header>
+
+        <div class="grid min-w-0 gap-6 rounded-3xl border border-navy/10 bg-cream p-5 shadow-card sm:p-8 lg:grid-cols-[1fr_0.72fr]" data-aos="fade-up" data-aos-duration="700">
+          <div class="grid min-w-0 gap-5 sm:grid-cols-2">
+            <div class="min-w-0 sm:col-span-2">
+              <label class="mb-2 block text-sm font-bold" for="sets-count">Кількість наборів</label>
+              <input class="widget-input min-h-12 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-navy transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun/50" id="sets-count" data-field="sets" name="sets-count" type="number" min="1" max="50" step="1" inputmode="numeric" required aria-describedby="error-sets" aria-invalid="false" value="1">
+              <p class="mt-2 min-h-5 text-sm font-semibold text-red-700" id="error-sets" aria-live="polite" role="alert"></p>
+            </div>
+
+            <div class="min-w-0 sm:col-span-2">
+              <label class="mb-2 block text-sm font-bold" for="set-type">Тип набору</label>
+              <select class="widget-input min-h-12 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-navy transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun/50" id="set-type" data-field="type" name="set-type">
+                <option value="classic">Класичний — без доплати</option>
+                <option value="premium">Преміум — +600 грн</option>
+                <option value="collector">Колекційний — +1500 грн</option>
+              </select>
+            </div>
+
+            <label class="flex min-h-12 items-center gap-3 rounded-xl border border-navy/10 bg-white px-4 py-3" for="gift-box">
+              <input class="h-5 w-5 accent-navy" id="gift-box" data-field="gift-box" name="gift-box" type="checkbox">
+              <span><strong>Подарункова упаковка</strong><small class="block text-text-muted">+250 грн</small></span>
+            </label>
+            <label class="flex min-h-12 items-center gap-3 rounded-xl border border-navy/10 bg-white px-4 py-3" for="engraving">
+              <input class="h-5 w-5 accent-navy" id="engraving" data-field="engraving" name="engraving" type="checkbox">
+              <span><strong>Гравіювання</strong><small class="block text-text-muted">+400 грн</small></span>
+            </label>
+            <label class="flex min-h-12 items-center gap-3 rounded-xl border border-navy/10 bg-white px-4 py-3 sm:col-span-2" for="express">
+              <input class="h-5 w-5 accent-navy" id="express" data-field="express" name="express" type="checkbox">
+              <span><strong>Експрес-доставка</strong><small class="block text-text-muted">+300 грн</small></span>
+            </label>
+          </div>
+
+          <aside class="min-w-0 rounded-2xl bg-navy p-5 text-white sm:p-6" aria-label="Розрахунок вартості">
+            <p class="text-sm font-bold text-white/75">Загальна вартість</p>
+            <p class="mt-2 break-words font-heading text-[clamp(2rem,8vw,3.25rem)] font-extrabold leading-tight text-sun" id="total-price" aria-live="polite">650 грн</p>
+            <dl class="mt-5 grid gap-3 border-t border-white/15 pt-5 text-sm">
+              <div class="flex justify-between gap-3"><dt class="text-white/75">Базова</dt><dd id="breakdown-base" class="text-right font-bold">200 грн</dd></div>
+              <div class="flex justify-between gap-3"><dt class="text-white/75">Набори</dt><dd id="breakdown-sets" class="text-right font-bold">450 грн</dd></div>
+              <div class="flex justify-between gap-3"><dt class="text-white/75">Тип</dt><dd id="breakdown-type" class="text-right font-bold">0 грн</dd></div>
+              <div class="flex justify-between gap-3"><dt class="text-white/75">Опції</dt><dd id="breakdown-options" class="text-right font-bold">0 грн</dd></div>
+            </dl>
+            <div class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+              <button class="min-h-12 rounded-full border border-white/30 px-5 py-3 font-extrabold text-white transition hover:border-sun hover:text-sun focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun" id="reset-widget" data-action="reset" type="button">Скинути</button>
+              <button class="min-h-12 rounded-full bg-sun px-5 py-3 font-extrabold text-navy shadow-button transition hover:bg-sun-hover focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun disabled:cursor-not-allowed disabled:opacity-60" id="order-widget" data-action="order" type="button">Замовити</button>
+            </div>
+            <p class="mt-4 min-h-12 text-sm leading-6 text-white/80" id="order-message" aria-live="polite"></p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
     <section class="bg-white py-16 sm:py-20 lg:py-24" id="feedback" aria-labelledby="feedback-title">
       <div class="mx-auto max-w-3xl px-5 sm:px-8">
         <header class="mx-auto mb-8 max-w-2xl text-center">
@@ -535,5 +594,6 @@
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="js/plugins.js"></script>
+  <script src="js/widget.js"></script>
 </body>
 </html>
