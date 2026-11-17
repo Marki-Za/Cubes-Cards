@@ -65,3 +65,39 @@ index.html       Підключення бібліотек, Hero, галерея
 css/style.css    Захист Swiper від розсипання до ініціалізації та стилі керування
 js/plugins.js    Ініціалізація Typed.js, Fancybox, Swiper та AOS
 ```
+
+## ЛР №11 — інтерактивний віджет «Збери свій набір»
+
+У лендинг додано секцію `#widget` після відгуків і перед формою зворотного зв'язку. Віджет миттєво рахує вартість подарункового набору.
+
+| Параметр | Тип | Значення | Вплив |
+|---|---|---|---|
+| Кількість наборів | number | 1–50, ціле | +450 грн за набір |
+| Тип набору | select | classic / premium / collector | 0 / +600 / +1500 грн |
+| Подарункова упаковка | checkbox | так/ні | +250 грн |
+| Гравіювання | checkbox | так/ні | +400 грн |
+| Експрес-доставка | checkbox | так/ні | +300 грн |
+
+Базова вартість — 200 грн. Формула: `200 + sets * 450 + typeFee + giftBox(250) + engraving(400) + express(300)`.
+
+Запуск перевірок:
+
+```text
+node tests/widget.test.js
+```
+
+Структура файлів віджета:
+
+```text
+index.html                 секція #widget
+css/style.css              стани поля і фокуса віджета
+js/widget.js               IIFE, validateSets, calculateTotal, initWidget
+tests/widget.test.js       чисті Node-тести та edge cases
+tests/results-before.txt   реальний запис невдалої перевірки версії 1
+tests/results-after.txt    реальний запис невдалої перевірки фінальної версії
+docs/WIDGET_SPEC.md        бізнес-правила і події
+AUDIT.md                   самоаудит
+QA_LOG.md                  узгоджений QA-журнал
+REPORT_SNIPPETS.md         фрагменти для звіту
+docs/widget-v1-naive.txt   збережена наївна версія ЛР №11
+```
