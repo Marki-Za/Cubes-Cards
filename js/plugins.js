@@ -2,6 +2,23 @@
 document.addEventListener("DOMContentLoaded", () => {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  document.querySelectorAll("[data-youtube-facade]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const videoId = button.dataset.videoId;
+      if (!videoId) return;
+      const iframe = document.createElement("iframe");
+      iframe.className = "h-full w-full border-0";
+      iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(videoId)}?autoplay=1`;
+      iframe.title = "Відеоогляд настільних ігор";
+      iframe.loading = "eager";
+      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      iframe.referrerPolicy = "strict-origin-when-cross-origin";
+      iframe.allowFullscreen = true;
+      button.replaceWith(iframe);
+      iframe.focus();
+    });
+  });
+
   const typedStrings = [
     "Настільні ігри для всієї родини.",
     "Кубики, карти і гарна компанія.",

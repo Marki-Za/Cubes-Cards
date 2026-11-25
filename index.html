@@ -5,9 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Підбір настільної гри, бокс настільних ігор, підписка на настільні ігри та сімейні настільні ігри українською для компанії.">
   <meta name="theme-color" content="#17223B">
+  <link rel="canonical" href="https://cubes-cards.vercel.app/">
+  <link rel="icon" href="assets/icons/logotype-header.svg" type="image/svg+xml">
   <meta property="og:title" content="Кубики&Карти — підбір настільних ігор за 1 хвилину">
   <meta property="og:description" content="Підбір настільної гри для компанії, сімейних настільних ігор та підписка на бокс настільних ігор українською мовою.">
-  <meta property="og:image" content="assets/images/image.webp">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cubes-cards.vercel.app/">
+  <meta property="og:image" content="https://cubes-cards.vercel.app/assets/images/image.webp">
+  <meta property="og:locale" content="uk_UA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Кубики&Карти — підбір настільних ігор">
+  <meta name="twitter:description" content="Підбір настільної гри для компанії, сімейних настільних ігор та підписка на бокс настільних ігор.">
+  <meta name="twitter:image" content="https://cubes-cards.vercel.app/assets/images/image.webp">
   <title>Кубики&amp;Карти — підбір настільних ігор за 1 хвилину</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,7 +58,6 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
   <script src="js/validation.js" defer></script>
-  <script async defer src="https://www.time.is/t.js"></script>
 </head>
 <body id="top" class="bg-cream font-sans text-navy antialiased">
   <a class="sr-only fixed left-4 top-4 z-50 rounded-lg bg-white px-4 py-3 font-bold text-navy focus:not-sr-only focus:outline-none focus:ring-4 focus:ring-sun" href="#main-content">Перейти до основного вмісту</a>
@@ -109,7 +117,7 @@
         </div>
         <div class="hero-media relative min-h-[260px] overflow-hidden rounded-[28px] border border-white/10 bg-white/5 shadow-card sm:min-h-[360px] lg:min-h-[500px] lg:max-w-[560px] lg:justify-self-end">
           <img class="absolute inset-0 z-0 h-full w-full object-cover object-center opacity-95" src="assets/images/image.webp" alt="Ілюстрація вечора за настільною грою" width="1024" height="576">
-          <video class="absolute inset-0 z-10 h-full w-full object-cover object-center opacity-90" autoplay muted loop playsinline poster="assets/images/image.webp" preload="auto" aria-hidden="true" tabindex="-1">
+          <video class="absolute inset-0 z-10 h-full w-full object-cover object-center opacity-90" autoplay muted loop playsinline poster="assets/images/image.webp" preload="metadata" aria-hidden="true" tabindex="-1">
             <source src="assets/video/hero-video.mp4" type="video/mp4">
           </video>
           <p class="sr-only">Друзі зібралися за столом, грають у настільну гру та весело проводять час.</p>
@@ -242,7 +250,10 @@
         </header>
         <!-- Медіаінтеграція: YouTube-відео -->
         <div class="aspect-video w-full max-w-3xl overflow-hidden rounded-2xl shadow-lg mx-auto">
-          <iframe class="h-full w-full border-0" src="https://www.youtube.com/embed/Nn0jwpIEDgM" title="Відеоогляд настільних ігор" loading="lazy" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          <button class="group relative h-full w-full bg-navy text-white" type="button" data-youtube-facade data-video-id="Nn0jwpIEDgM" aria-label="Відтворити відеоогляд настільних ігор">
+            <img class="absolute inset-0 h-full w-full object-cover opacity-75" src="assets/images/image.webp" alt="" width="1024" height="576" loading="lazy">
+            <span class="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-sun text-2xl font-extrabold text-navy shadow-lg" aria-hidden="true">▶</span>
+          </button>
         </div>
       </div>
     </section>
@@ -297,10 +308,9 @@
             <li><strong class="text-navy">Графік:</strong> щодня 10:00–20:00</li>
           </ul>
         </div>
-        <div class="overflow-hidden rounded-2xl shadow-lg">
-          <!-- Медіаінтеграція: Google Maps -->
-          <iframe class="h-80 w-full border-0 md:h-[450px]" src="https://www.google.com/maps?q=Національний+університет+«Львівська+політехніка»,+вул.+Степана+Бандери+12,+Львів&z=16&output=embed" title="Інтерактивна карта проїзду до Львівської політехніки" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+        <a class="flex min-h-80 items-center justify-center rounded-2xl bg-navy px-6 text-center text-white shadow-lg transition hover:bg-[#202d49] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun md:min-h-[450px]" href="https://www.google.com/maps?q=Національний+університет+«Львівська+політехніка»,+вул.+Степана+Бандери+12,+Львів&amp;z=16" target="_blank" rel="noopener noreferrer" aria-label="Відкрити адресу у Google Maps в новій вкладці">
+          <span><strong class="block font-heading text-2xl">Львівська політехніка</strong><span class="mt-2 block text-white/75">Відкрити карту Google Maps ↗</span></span>
+        </a>
       </div>
     </section>
 
