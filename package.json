@@ -1,0 +1,12 @@
+{
+  "name": "cubes-cards",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./css/input.css -o ./css/tailwind.min.css --minify",
+    "build:js": "esbuild js/main.js js/validation.js js/plugins.js js/widget.js --minify --outdir=js/dist"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17",
+    "esbuild": "0.24.2"
+  }
+}

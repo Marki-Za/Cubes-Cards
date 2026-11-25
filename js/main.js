@@ -36,6 +36,22 @@ const recommendations = {
   }
 };
 
+const timeWidget = document.querySelector("#time-is-widget");
+
+if (timeWidget instanceof HTMLElement) {
+  const updateLvivTime = () => {
+    timeWidget.textContent = new Intl.DateTimeFormat("uk-UA", {
+      timeZone: "Europe/Kyiv",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: false
+    }).format(new Date());
+  };
+  updateLvivTime();
+  window.setInterval(updateLvivTime, 1000);
+}
+
 const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (character) => ({
   "&": "&amp;",
   "<": "&lt;",
