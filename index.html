@@ -117,8 +117,8 @@
         </div>
         <div class="hero-media relative min-h-[260px] overflow-hidden rounded-[28px] border border-white/10 bg-white/5 shadow-card sm:min-h-[360px] lg:min-h-[500px] lg:max-w-[560px] lg:justify-self-end">
           <img class="absolute inset-0 z-0 h-full w-full object-cover object-center opacity-95" src="assets/images/image.webp" alt="Ілюстрація вечора за настільною грою" width="1024" height="576">
-          <video class="absolute inset-0 z-10 h-full w-full object-cover object-center opacity-90" autoplay muted loop playsinline poster="assets/images/image.webp" preload="metadata" aria-hidden="true" tabindex="-1">
-            <source src="assets/video/hero-video.mp4" type="video/mp4">
+          <video class="absolute inset-0 z-10 h-full w-full object-cover object-center opacity-90" muted loop playsinline poster="assets/images/image.webp" preload="none" aria-hidden="true" tabindex="-1" data-desktop-video>
+            <source data-src="assets/video/hero-video.mp4" type="video/mp4">
           </video>
           <p class="sr-only">Друзі зібралися за столом, грають у настільну гру та весело проводять час.</p>
         </div>
@@ -308,7 +308,7 @@
             <li><strong class="text-navy">Графік:</strong> щодня 10:00–20:00</li>
           </ul>
         </div>
-        <a class="flex min-h-80 items-center justify-center rounded-2xl bg-navy px-6 text-center text-white shadow-lg transition hover:bg-[#202d49] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun md:min-h-[450px]" href="https://www.google.com/maps?q=Національний+університет+«Львівська+політехніка»,+вул.+Степана+Бандери+12,+Львів&amp;z=16" target="_blank" rel="noopener noreferrer" aria-label="Відкрити адресу у Google Maps в новій вкладці">
+        <a class="flex min-h-80 items-center justify-center rounded-2xl bg-navy px-6 text-center text-white shadow-lg transition hover:bg-[#202d49] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sun md:min-h-[450px]" href="https://www.google.com/maps?q=Національний+університет+«Львівська+політехніка»,+вул.+Степана+Бандери+12,+Львів&amp;z=16" target="_blank" rel="noopener noreferrer">
           <span><strong class="block font-heading text-2xl">Львівська політехніка</strong><span class="mt-2 block text-white/75">Відкрити карту Google Maps ↗</span></span>
         </a>
       </div>
@@ -354,7 +354,7 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <article class="flex h-full flex-col rounded-2xl border border-navy/10 bg-white p-6 shadow-card">
-                <p class="font-bold tracking-widest text-rating" aria-label="Оцінка 5 з 5"><span aria-hidden="true">★★★★★</span></p>
+                <p class="font-bold tracking-widest text-rating"><span aria-hidden="true">★★★★★</span><span class="sr-only">Оцінка: 5 з 5</span></p>
                 <blockquote class="mt-4 flex-1 leading-7">«Зібралися всією родиною й одразу знайшли гру, у яку цікаво грати разом.»</blockquote>
                 <div class="mt-6 flex items-center gap-3">
                   <span class="grid h-12 w-12 place-items-center rounded-full bg-sun font-extrabold text-navy" aria-hidden="true">ОК</span>
@@ -364,7 +364,7 @@
             </div>
             <div class="swiper-slide">
               <article class="flex h-full flex-col rounded-2xl border border-navy/10 bg-white p-6 shadow-card">
-                <p class="font-bold tracking-widest text-rating" aria-label="Оцінка 5 з 5"><span aria-hidden="true">★★★★★</span></p>
+                <p class="font-bold tracking-widest text-rating"><span aria-hidden="true">★★★★★</span><span class="sr-only">Оцінка: 5 з 5</span></p>
                 <blockquote class="mt-4 flex-1 leading-7">«Квіз швидко звузив вибір, а короткі правила допомогли почати без довгої підготовки.»</blockquote>
                 <div class="mt-6 flex items-center gap-3">
                   <span class="grid h-12 w-12 place-items-center rounded-full bg-mint font-extrabold text-navy" aria-hidden="true">МЛ</span>
@@ -374,7 +374,7 @@
             </div>
             <div class="swiper-slide">
               <article class="flex h-full flex-col rounded-2xl border border-navy/10 bg-white p-6 shadow-card">
-                <p class="font-bold tracking-widest text-rating" aria-label="Оцінка 5 з 5"><span aria-hidden="true">★★★★★</span></p>
+                <p class="font-bold tracking-widest text-rating"><span aria-hidden="true">★★★★★</span><span class="sr-only">Оцінка: 5 з 5</span></p>
                 <blockquote class="mt-4 flex-1 leading-7">«Знайшли веселу гру для друзів. Найкраще — усі були залучені від першого раунду.»</blockquote>
                 <div class="mt-6 flex items-center gap-3">
                   <span class="grid h-12 w-12 place-items-center rounded-full bg-coral/20 font-extrabold text-navy" aria-hidden="true">ІР</span>
@@ -384,7 +384,7 @@
             </div>
             <div class="swiper-slide">
               <article class="flex h-full flex-col rounded-2xl border border-navy/10 bg-white p-6 shadow-card">
-                <p class="font-bold tracking-widest text-rating" aria-label="Оцінка 5 з 5"><span aria-hidden="true">★★★★★</span></p>
+                <p class="font-bold tracking-widest text-rating"><span aria-hidden="true">★★★★★</span><span class="sr-only">Оцінка: 5 з 5</span></p>
                 <blockquote class="mt-4 flex-1 leading-7">«Зручно підібрати настільну гру під настрій компанії, а не навмання брати першу коробку.»</blockquote>
                 <div class="mt-6 flex items-center gap-3">
                   <span class="grid h-12 w-12 place-items-center rounded-full bg-sun font-extrabold text-navy" aria-hidden="true">ТА</span>
@@ -394,7 +394,7 @@
             </div>
             <div class="swiper-slide">
               <article class="flex h-full flex-col rounded-2xl border border-navy/10 bg-white p-6 shadow-card">
-                <p class="font-bold tracking-widest text-rating" aria-label="Оцінка 5 з 5"><span aria-hidden="true">★★★★★</span></p>
+                <p class="font-bold tracking-widest text-rating"><span aria-hidden="true">★★★★★</span><span class="sr-only">Оцінка: 5 з 5</span></p>
                 <blockquote class="mt-4 flex-1 leading-7">«Нова гра стала гарним приводом відкласти телефони й провести вечір разом.»</blockquote>
                 <div class="mt-6 flex items-center gap-3">
                   <span class="grid h-12 w-12 place-items-center rounded-full bg-mint font-extrabold text-navy" aria-hidden="true">СВ</span>
@@ -404,7 +404,7 @@
             </div>
             <div class="swiper-slide">
               <article class="flex h-full flex-col rounded-2xl border border-navy/10 bg-white p-6 shadow-card">
-                <p class="font-bold tracking-widest text-rating" aria-label="Оцінка 5 з 5"><span aria-hidden="true">★★★★★</span></p>
+                <p class="font-bold tracking-widest text-rating"><span aria-hidden="true">★★★★★</span><span class="sr-only">Оцінка: 5 з 5</span></p>
                 <blockquote class="mt-4 flex-1 leading-7">«Подобається, що можна врахувати кількість гравців і час, який є на партію.»</blockquote>
                 <div class="mt-6 flex items-center gap-3">
                   <span class="grid h-12 w-12 place-items-center rounded-full bg-coral/20 font-extrabold text-navy" aria-hidden="true">ДН</span>

@@ -28,6 +28,12 @@ body {
   }
 }
 
+@media (max-width: 767px) {
+  .hero-media video {
+    display: none;
+  }
+}
+
 .hero-surface {
   background:
     radial-gradient(ellipse at 90% 20%, rgb(255 200 87 / 18%), transparent 42%),

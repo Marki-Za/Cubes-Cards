@@ -38,6 +38,16 @@ const recommendations = {
 
 const timeWidget = document.querySelector("#time-is-widget");
 
+const desktopVideo = document.querySelector("[data-desktop-video]");
+if (desktopVideo instanceof HTMLVideoElement && window.matchMedia("(min-width: 768px)").matches) {
+  const source = desktopVideo.querySelector("source[data-src]");
+  if (source instanceof HTMLSourceElement) {
+    source.src = source.dataset.src || "";
+    desktopVideo.load();
+    desktopVideo.play().catch(() => {});
+  }
+}
+
 if (timeWidget instanceof HTMLElement) {
   const updateLvivTime = () => {
     timeWidget.textContent = new Intl.DateTimeFormat("uk-UA", {
